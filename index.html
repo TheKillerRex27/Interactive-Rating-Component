@@ -16,11 +16,7 @@
 
 <body onload="onClick()">
 
-
-
-  <div class="rating-card">
-
-    <!-- Rating state start -->
+  <div id="rating-state" class="rating-card">
     <div class="rating-content">
       <img class="star-icon" src="images\icon-star.svg" alt="">
 
@@ -28,16 +24,29 @@
       <p class="rating-text">Please let us know how we did with your support request. All feedback is appreciated
         to help us improve our offering!</p>
 
-      <form action="thank-you.html" method="post">
         <button class="rating-button" id="btn-1" type="button" name="1">1</button>
         <button class="rating-button" id="btn-2" type="button" name="2">2</button>
         <button class="rating-button" id="btn-3" type="button" name="3">3</button>
         <button class="rating-button" id="btn-4" type="button" name="4">4</button>
         <button class="rating-button" id="btn-5" type="button" name="5">5</button><br>
-        <button class="rating-submit-button" type="submit" name="button">SUBMIT</button>
-      </form>
+        <button class="rating-submit-button" id="submit" type="submit" name="button">SUBMIT</button>
     </div>
+  </div>
 
+  <div id="thank-you-state" class="ty-rating-card rating-card-hidden">
+    <div class="ty-rating-content">
+      <img src="images\illustration-thank-you.svg" alt="">
+
+        <p class="ty-rating">You selected <span id="rating">num</span> out of 5</p>
+
+      <h1 class="ty-rating-heading">Thank you!</h1>
+      <p class="ty-rating-text">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Alex Nwafor</a>.
   </div>
 
   <div class="attribution">
